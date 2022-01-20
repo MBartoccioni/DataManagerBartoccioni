@@ -9,8 +9,11 @@ public class Brano {
     private Date dataPubblicazione;
 
 
-    public Brano() {
 
+    public Brano(String titolo, String genere, String autore, String toString) {
+        this.titolo=titolo;
+        this.genere=genere;
+        this.autore=autore;
     }
 
     public String getTitolo() {

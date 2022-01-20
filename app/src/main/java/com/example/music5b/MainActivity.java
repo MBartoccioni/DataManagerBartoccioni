@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnInserisci;
-    EditText txtTitolo;
+    Button btnInserisci, btnVisualizza;
+    EditText txtTitolo, txtGenere, txtAutore;
     GestoreBrani gb;
     Spinner spnGeneri;
     ArrayAdapter <String> aaG;
@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         gb = new GestoreBrani();
         btnInserisci = (Button) findViewById(R.id.btnInserisci);
+        btnVisualizza = (Button) findViewById(R.id.btnVisualizza);
         txtTitolo = (EditText) findViewById(R.id.txtTitolo);
+        txtGenere = (EditText) findViewById(R.id.txtGenere);
+        txtAutore = (EditText) findViewById(R.id.txtAutore);
         spnGeneri = (Spinner) findViewById(R.id.spnGeneri);
         aaG = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,generi);
 
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btnInserisci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gb.addBrano();
+                gb.addBrano(new Brano(txtTitolo.getText().toString(),spnGeneri.getSelectedItem().toString(),txtGenere.getText().toString(),txtAutore.getText().toString()));
             }
         });
 

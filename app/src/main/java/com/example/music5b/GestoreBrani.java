@@ -8,8 +8,8 @@ public class GestoreBrani {
         listaBrani = new ArrayList<Brano>();
 
     }
-    public void addBrano(){
-        Brano nb = new Brano();
+    public void addBrano(Brano nb){
+
         listaBrani.add(nb);
     }
 }

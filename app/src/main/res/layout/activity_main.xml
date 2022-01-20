@@ -17,21 +17,25 @@
         android:text="Inserisci"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnGeneri" />
+        app:layout_constraintTop_toBottomOf="@+id/spnGeneri"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/spnGeneri"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="146dp"
-        android:layout_marginBottom="535dp"
+        android:layout_marginBottom="367dp"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitolo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtGenere"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/txtTitolo"
@@ -43,8 +47,61 @@
         android:layout_marginBottom="33dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="Titolo"
         app:layout_constraintBottom_toTopOf="@+id/spnGeneri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.383" />
+
+    <EditText
+        android:id="@+id/txtGenere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Genere"
+        app:layout_constraintBottom_toTopOf="@+id/btnInserisci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitolo"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <Button
+        android:id="@+id/btnVisualizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="122dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="265dp"
+        android:text="Visualizza"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnInserisci"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGenere" />
+
+    <EditText
+        android:id="@+id/txtAutore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Autore"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitolo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
